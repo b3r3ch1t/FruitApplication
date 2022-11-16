@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitApplication", "FruitApplication\FruitApplication.csproj", "{8B0077A3-17D7-4556-8DA3-798F03A809DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{150868A8-93D6-4E5F-9988-557E69D6D7B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B0077A3-17D7-4556-8DA3-798F03A809DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0077A3-17D7-4556-8DA3-798F03A809DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0077A3-17D7-4556-8DA3-798F03A809DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0077A3-17D7-4556-8DA3-798F03A809DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{150868A8-93D6-4E5F-9988-557E69D6D7B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{150868A8-93D6-4E5F-9988-557E69D6D7B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{150868A8-93D6-4E5F-9988-557E69D6D7B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{150868A8-93D6-4E5F-9988-557E69D6D7B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A19AEF8-1ADD-4602-80D9-AE4985D9DB97}
+	EndGlobalSection
+EndGlobal
