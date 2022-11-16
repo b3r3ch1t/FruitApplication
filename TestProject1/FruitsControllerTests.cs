@@ -106,19 +106,15 @@ namespace FruitTest
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created));
             response = await _client.DeleteAsync("/fruits/1");
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NoContent));
+
+
             response = await _client.GetAsync("/fruits");
             string responseBody = await response.Content.ReadAsStringAsync();
 
-            try
-            {
-                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                var actual = JsonSerializer.Deserialize<List<FruitDTO>>(responseBody, options);
-                Assert.That(actual.Count, Is.EqualTo(0));
-            }
-            catch (JsonException)
-            {
-                Assert.Fail("Could not deserialize response JSON:" + Truncate(responseBody));
-            }
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NotFound));
+
+
+           
         }
         [Test]
         public async Task DeleteFruitRespondsWithNotFound()

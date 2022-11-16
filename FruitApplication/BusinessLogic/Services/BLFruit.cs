@@ -1,11 +1,8 @@
-﻿using BusinessLogic.Model;
-using System.Collections.Generic;
-using DataAccess.Entities;
-using System.Linq;
-using System;
+﻿
 using FruitApplication.DataAccess.Interfaces;
 using FruitApplication.BusinessLogic.Interfaces;
 using FruitApplication.BusinessLogic.Models;
+using FruitApplication.DataAccess.Entities;
 
 namespace BusinessLogic.Services
 {

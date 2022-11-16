@@ -11,18 +11,16 @@ namespace FruitApplication.DataAccess.Repository
     public class FruitRepository : IFruitRepository
     {
         private readonly FruitContext _dbContext;
-        private List<Fruit> listFruits;
-
         public FruitRepository(FruitContext fruitContext)
         {
             _dbContext = fruitContext;
-
-            listFruits = new List<Fruit>();
 
         }
         public List<Fruit> FindAll()
         {
             var result = _dbContext.Fruits.ToList();
+
+
 
             return result;
 
@@ -40,7 +38,6 @@ namespace FruitApplication.DataAccess.Repository
             _dbContext.Fruits.Add(fruit);
 
             _dbContext.SaveChanges();
-
             return fruit;
 
         }
@@ -49,7 +46,7 @@ namespace FruitApplication.DataAccess.Repository
         {
             var fruit = FindAll().First(x => x.Id == id);
 
-            Delete(id);
+             
             fruit.Description = fruitNew.Description;
             fruit.Id = id;
             fruit.Name = fruitNew.Name;
@@ -59,13 +56,17 @@ namespace FruitApplication.DataAccess.Repository
 
             _dbContext.SaveChanges();
 
+           
+
             return fruit;
         }
 
         public void Delete(long id)
         {
             var fruit = FindById(id);
-            _dbContext.Remove(fruit);
+            
+           _dbContext.Remove(fruit);
+           _dbContext.SaveChanges();
 
         }
     }

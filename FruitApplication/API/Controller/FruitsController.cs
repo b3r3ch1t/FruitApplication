@@ -1,9 +1,5 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using BusinessLogic.Models;
 using FruitApplication.BusinessLogic.Interfaces;
 using FruitApplication.BusinessLogic.Models;
 
@@ -37,7 +33,7 @@ namespace FruitApplication.API.Controller
                     date = DateTime.Now
                 };
 
-                return Ok(e);
+                return NotFound(e);
 
             }
 

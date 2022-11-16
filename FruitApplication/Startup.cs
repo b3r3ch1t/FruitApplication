@@ -13,6 +13,7 @@ using System.Runtime.ConstrainedExecution;
 using FruitApplication.DataAccess.Interfaces;
 using FruitApplication.DataAccess.Repository;
 using FruitApplication.BusinessLogic.Interfaces;
+using FruitApplication.DataAccess.Entities;
 
 namespace FruitApplication
 {
@@ -48,10 +49,7 @@ namespace FruitApplication
 
             services.AddScoped<IBLFruit, BLFruit>();
 
-
-           // services.AddScoped<IFruitContextFaker, FruitContextFaker>();
-
-
+            
 
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
